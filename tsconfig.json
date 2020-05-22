@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es5",
+    "module": "commonjs",
+    "lib": [
+      "ES5",
+      "ES6",
+      "ES7",
+      "ES2015",
+      "ES2016",
+      "ES2017",
+      "ES2018",
+      "ESNext",
+      "dom"
+    ],
+    "strict": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "types",
+      "node_modules/@types",
+      "node_modules/phaser/types"
+    ],
+    // 支持在 CommonJs 模块下使用 import 
+    "esModuleInterop": true,
+    // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    "paths": {
+      "@root/*": ["./*"],
+      "@/*": ["src/*"]
+    }
+  },
+  "include": [
+    "src",
+    "config",
+    "types/global.d.ts",
+    "types/stats-js.d.ts",
+    "node_modules/phaser/types/phaser.d.ts"
+  ]
+}

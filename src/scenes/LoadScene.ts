@@ -5,7 +5,7 @@ export default class LoadScene extends Phaser.Scene {
 		super({ key: 'LoadScene' })
 	}
 
-	public init(): void {}
+	public init(): void { }
 
 	public preload(): void {
 		this.load.image('logo', image)

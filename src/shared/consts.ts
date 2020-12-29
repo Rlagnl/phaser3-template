@@ -14,8 +14,7 @@ const FONT_FAMILY = 'PingFangSC,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,S
 const GAME_READER_TYPE: number = setRenderType()
 
 function setRatio(): number {
-	// return window.devicePixelRatio * 1.2
-	return 1
+	return window.devicePixelRatio * 1.2
 }
 
 function setWindowWidth(): number {

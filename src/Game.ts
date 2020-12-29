@@ -13,8 +13,6 @@ export default class Game {
 		type: CONSTS.GAME_READER_TYPE,
 		width: CONSTS.WINDOW_WIDTH,
 		height: CONSTS.WINDOW_HEIGHT,
-		// width: 600,
-		// height: 600,
 		parent: 'app',
 		canvasStyle: 'position: absolute; display: block;',
 		scene: [LoadScene, GameScene],

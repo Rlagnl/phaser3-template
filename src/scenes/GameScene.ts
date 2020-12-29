@@ -11,17 +11,19 @@ export default class GameScene extends BaseScene {
 	public create(): void {
 		// 初始化适配
 		const _r = new Rectangle(0, 0, CONSTS.DESIGN_WIDTH, CONSTS.DESIGN_HEIGHT)
-		this.initCamera(window.innerWidth, window.innerHeight, _r)
+		this.initCamera(CONSTS.WINDOW_WIDTH, CONSTS.WINDOW_HEIGHT, _r)
+		// 获取摄像机属性
+		const cr = this.camera.getCameraRect()
+		// 背景
+		const graphics = this.add.graphics()
+		graphics.fillStyle(0x009fcc, 1)
+		graphics.fillRect(cr.x, cr.y, cr.width, cr.height)
 		// 获取布局属性
 		const lr = this.camera.getLayoutRect()
 		// 边框
-		const graphics = this.add.graphics()
-		// graphics.lineStyle(1, 0x009fcc, 1)
-		// graphics.strokeRect(5, 5, lr.width - 10, lr.height - 10)
-		graphics.fillStyle(0x009fcc, 1)
-		graphics.fillRect(0, 0, lr.width, lr.height)
+		graphics.lineStyle(1, 0xA85438, 1)
+		graphics.strokeRect(0, 0, lr.width, lr.height)
 		// 创建图片
-		const aa = this.add.image(0, 0, 'logo').setOrigin(0, 0)
-		console.log('a', aa)
+		this.add.image(50, 50, 'logo').setOrigin(0, 0)
 	}
 }

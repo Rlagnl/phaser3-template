@@ -44,7 +44,7 @@
     }
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "0.19.2",
     "phaser": "3.50.1",
     "stats-js": "^1.0.1",
     "vconsole": "^3.3.4"

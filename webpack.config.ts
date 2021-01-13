@@ -4,6 +4,7 @@ import htmlWebpackPlugin from 'html-webpack-plugin'
 import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 import UglifyJsPlugin from 'uglifyjs-webpack-plugin'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import CopyPlugin from "copy-webpack-plugin"
 
 const config: webpack.Configuration = {
   mode: 'development',
@@ -43,6 +44,7 @@ const config: webpack.Configuration = {
   resolve: {
     extensions: ['.js', '.ts', '.json'],
     alias: {
+      '@root': path.join(__dirname, './'),
       '@': path.join(__dirname, './src'),
     }
   },
@@ -70,13 +72,17 @@ const config: webpack.Configuration = {
         })
       },
       {
-        test: /\.(png|jpg|gif)$/,
+        test: /\.(png|jpg|gif|mp3|mp4)$/,
         use: [{
           loader: 'url-loader',
           options: {
             limit: 1  //8k一下的转义为base64
           }
         }]
+      },
+      {
+        test: /\.(atlas)$/,
+        use: [{ loader: 'file-loader' }]
       }
     ]
   },
@@ -89,7 +95,12 @@ const config: webpack.Configuration = {
     new CleanWebpackPlugin(),
     new ExtractTextPlugin({
       filename: 'index.[hash:8].css'
-    })
+    }),
+    new CopyPlugin({
+      patterns: [
+        { from: "./static", to: "./static" },
+      ],
+    }),
   ]
 }
 

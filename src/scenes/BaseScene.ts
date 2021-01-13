@@ -1,6 +1,5 @@
-import Rectangle = Phaser.Geom.Rectangle
 import SimpleCameraPlugin from '../camera/SimpleCameraPlugin'
-
+import Rectangle = Phaser.Geom.Rectangle
 export default class BaseScene extends Phaser.Scene {
 	/**
 	 * 摄像机控制器

@@ -1,6 +1,8 @@
 // 设计稿宽高
-const DESIGN_WIDTH = 1024
-const DESIGN_HEIGHT = 768
+// const DESIGN_WIDTH = 1024
+// const DESIGN_HEIGHT = 768
+const DESIGN_WIDTH = 375
+const DESIGN_HEIGHT = 607
 // 缩放比例
 const RATIO = setRatio()
 // 展示区域宽高

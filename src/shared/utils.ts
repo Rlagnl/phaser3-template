@@ -25,8 +25,8 @@ function random(n: number, m: number): number {
 // 切割字符串
 function string2array($str: string, $separator: string = ''): Array<string> {
 	if (!$str) return []
-	const _arr = $str.split($separator)
-	const _newArr = []
+	const _arr: Array<string> = $str.split($separator)
+	const _newArr: Array<string> = []
 	for (let i = 0; i < _arr.length; i++) {
 		_newArr.push(_arr[i])
 	}
@@ -42,7 +42,7 @@ function string2array($str: string, $separator: string = ''): Array<string> {
 function allIndexOf($tar: string, $src: string): Array<number> {
 	const regex = new RegExp($src, 'gi')
 	let result
-	const indices = []
+	const indices: Array<number> = []
 	while ((result = regex.exec($tar))) {
 		indices.push(result.index)
 	}

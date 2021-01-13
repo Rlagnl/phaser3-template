@@ -21,10 +21,13 @@
       "node_modules/@types",
       "node_modules/phaser/types"
     ],
-    // 支持在 CommonJs 模块下使用 import 
+    // 支持在 CommonJs 模块下使用 import
     "esModuleInterop": true,
     // 允许从没有设置默认导出的模块中默认导入。这并不影响代码的输出，仅为了类型检查
     "allowSyntheticDefaultImports": true,
+    // 严格属性初始化
+    "strictPropertyInitialization": false,
+    "noImplicitAny": false,
     "baseUrl": "./",
     "paths": {
       "@root/*": ["./*"],
